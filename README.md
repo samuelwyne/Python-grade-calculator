@@ -1,2 +1,15 @@
-# Python-grade-calculator
-A beginner Python program that calculates student grades using if, elif, and else statements. Built to practice decision-making in Python.
+# python-grade-calculator
+
+## Description
+This project was created while learning Python.
+
+## Features
+- User input
+- Variables
+- Output formatting
+
+## Technologies Used
+- Python 3
+
+## Author
+Samuel Sekasi

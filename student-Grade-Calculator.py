@@ -1,26 +1,33 @@
-name=[""]*5
-mark=[""]*5
-print("Welcome to grade calc")
+name = [""] * 5
+mark = [0] * 5
+
+print("Welcome to Grade Calculator")
+
 for i in range(5):
- 
- name[i]=input("Enter your name: ")
- mark[i]=int(input("Enter your mark: "))
+    name[i] = input("Enter your name: ")
 
-for i in range (5): 
- if 100>mark[i]>80:
-    grade="A"
-    print(f"Grade :{grade} for :{name[i]}")
+    while True:
+        try:
+            mark[i] = int(input("Enter your mark: "))
 
- elif 79>mark[i]>70:
-    grade="B"
-    print(f"Grade :{grade} for :{name[i]}")
- elif 69>mark[i]>60:
-    grade="C"
-    print(f"Grade :{grade} for :{name[i]}")      
+            if 0 <= mark[i] <= 100:
+                break
+            else:
+                print("Enter a mark between 0 and 100.")
 
- elif 59>mark[i]>50:
-    grade="D"
-    print(f"Grade :{grade} for :{name[i]}") 
- else:
-    grade="F"
-    print(f"Grade :{grade} for :{name[i]}")     
+        except ValueError:
+            print("Please enter numbers only.")
+
+for i in range(5):
+    if mark[i] >= 80:
+        grade = "A"
+    elif mark[i] >= 70:
+        grade = "B"
+    elif mark[i] >= 60:
+        grade = "C"
+    elif mark[i] >= 50:
+        grade = "D"
+    else:
+        grade = "F"
+
+    print(f"{name[i]} scored {mark[i]} and got Grade {grade}")
